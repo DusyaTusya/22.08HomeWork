@@ -5,6 +5,6 @@ degree = 0 # начинаем с нулевой степени
 number = 2 # выбираем число, которое будем возводить в степень
 exponentiation = number**degree # результат возведения в степень
 while exponentiation <= N: # цикл, пока результат не превосходит заданное число
-    exponentiation = exponentiation *2
-    print (degree)
     degree+=1
+    print (exponentiation)
+    exponentiation = number**degree
