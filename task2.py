@@ -4,17 +4,14 @@
 Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. 
 Помогите Кате отгадать задуманные Петей числа.'''
 
-S = int(input('Введите сумму двух натуральных чисел: '))
-P = int(input('Введите произведение двух натуральных чисел: '))
+S = int(input('Введите сумму загаданных чисел: '))
+P = int(input('Введите произведение загаданных чисел: '))
 number1 = 0
 number2 = 0
-for number1 in range(1000):
+for number1 in range(1000): # цикл по нахождению загаданных чисел
     for number2 in range(1000):
         amount = number1 + number2
         product = number1 * number2
-        if amount == S and product == P and number1 <= number2:
-            print (number1, number2)
-
-
-print(S)
-print(P)
+        if amount == S and product == P and number1 <= number2: # третье условие для того, 
+            print (number1, number2)                            # чтобы цикл после первого совпадения не проверял числа, 
+                                                                # меняя их местами (например 2 и 7, 7 и 2)
